@@ -1,12 +1,17 @@
-const { Client, Intents } = require("discord.js");
+import { Client, Intents, Collection } from 'discord.js'
+console.log(Client);
+
 //fetch will be used to call the API
-const fetch = import("node-fetch");
-const client = new Client({
+import fetch from 'node-fetch';
+
+console.log(fetch);
+
+const client = new Client({ 
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES
   ]
-});
+}); 
 
 //this function fetches and returns the quote from the provided URL
 function getQuote() {
@@ -43,4 +48,3 @@ client.on("message", msg => {
 
 ///process.env is used to access my environment variable
 client.login(process.env.TOKEN);
-
