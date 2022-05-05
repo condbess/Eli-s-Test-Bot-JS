@@ -28,10 +28,6 @@ client.on("ready", () => {
 
 client.on("message", msg => {
 
-});
-
-client.on("message", msg => {
-
   //rite of passage from C... it's enough to make a grown man cry
   if (msg.content === "Hello") {
     msg.reply("World!")
