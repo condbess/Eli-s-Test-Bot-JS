@@ -1,4 +1,4 @@
-import { Client, Intents, Collection } from 'discord.js'
+import { Client, Intents} from 'discord.js'
 console.log(Client);
 
 //fetch will be used to call the API
@@ -12,6 +12,16 @@ const client = new Client({
     Intents.FLAGS.GUILD_MESSAGES
   ]
 }); 
+
+const sad_words = [
+  "sad", "depressed", "unhappy", "angry", "dispirited", "dejected", "glum", "gloomy", "desolate", "down"
+];
+
+const encours = [
+  "Cheer up!",
+  "Hang in there!",
+  "You are a great person/bot!"
+];
 
 //this function fetches and returns the quote from the provided URL
 function getQuote() {
@@ -41,8 +51,13 @@ client.on("message", msg => {
   //check if the message is from the bot so it doesn't reply to itself
   if (msg.author.bot) return
 
-  if (msg.content === "$inspire") {
+  if (msg.content === "+bestow") {
     getQuote().then(quote => msg.channel.send(quote))
+  }
+
+  if (sad_words.some(word => msg.content.includes(word))) {
+    const encour = encours [Math.floor(Math.random() * encours.length)]
+    msg.reply(encour)
   }
 });
 
