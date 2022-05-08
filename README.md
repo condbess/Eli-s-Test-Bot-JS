@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ## Eli-s-Test-Bot-JS<sub>(may soon be known as ignite)</sub>
+=======
+### Eli-s-Test-Bot-JS<sub>(may son be known as ignite)</sub>
+>>>>>>> origin/main
 Work in progress: The code for a bot that replies with encouraging words to Discord Chat users that say something negative.
 
 ### Functionality
