@@ -1,4 +1,4 @@
-import { Client, Intents} from 'discord.js'
+import { Client, Intents } from 'discord.js'
 import fetch from 'node-fetch' //fetch will be used to call the API
 import Database from '@replit/database'
 
