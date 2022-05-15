@@ -75,6 +75,10 @@ client.on("message", msg => {
   if (msg.content === "Hello") {
     msg.reply("World!")
   }
+  
+  if (msg.content === "Your") {
+    msg.reply("Welcome!")
+  }
 
   //check if the message is from the bot so it doesn't reply to itself
   if (msg.author.bot) return
